@@ -22,4 +22,4 @@ jobs:
         script: |
           cd demo_devops
           git pull origin master
-          java Main.java
+          java Master.java
