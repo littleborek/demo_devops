@@ -20,6 +20,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
-            cd demo_devops
-            git pull origin master
-            ./start_app.sh
+              sudo systemctl stop demo_devops.service
+              cd demo_devops
+              git pull origin master
+              sudo systemctl start demo_devops.service
